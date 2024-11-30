@@ -1,8 +1,8 @@
 // imports
 import 'package:e178117_simple_weather_news_app/login.dart';
 import 'package:flutter/material.dart';
-import 'database_handler.dart';
-import 'user.dart';
+import '../services/database_handler.dart';
+import '../entities/user.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);

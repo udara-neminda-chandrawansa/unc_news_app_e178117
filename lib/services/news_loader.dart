@@ -1,7 +1,7 @@
 // imports
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'news_item.dart';
+import '../entities/news_item.dart';
 
 class NewsService {
   // my api key to NewsApi service

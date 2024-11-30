@@ -2,11 +2,11 @@
 import 'package:e178117_simple_weather_news_app/login.dart';
 import 'package:e178117_simple_weather_news_app/user.dart';
 import 'package:flutter/material.dart';
-import 'news_item.dart';
-import 'news_loader.dart';
-import 'filter_modal.dart';
+import 'entities/news_item.dart';
+import 'services/news_loader.dart';
+import 'screens/filter_modal.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'database_handler.dart';
+import 'services/database_handler.dart';
 
 void main() {
   runApp(const MyApp());
