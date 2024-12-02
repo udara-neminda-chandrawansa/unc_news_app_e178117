@@ -387,11 +387,6 @@ class _UserPage extends State<UsersPage> {
     });
   }
 
-  // method to refresh users
-  void _refreshUsers() {
-    _fetchUsers(); // load all users
-  }
-
   // method to add a new user
   void _addUser() async {
     // work only if both text controllers are not empty
@@ -410,7 +405,7 @@ class _UserPage extends State<UsersPage> {
       // clear text controllers after adding
       _nameController.clear();
       _passController.clear();
-      _refreshUsers(); // load all users
+      _fetchUsers(); // load all users
     } else {
       // if controllers empty, show this message
       print("Email or Password is empty. User not added.");
@@ -438,7 +433,7 @@ class _UserPage extends State<UsersPage> {
   // connects with 'database_handler' to delete a user
   Future<void> _deleteUser(int index) async {
     await handler.deleteUser(_users[index].id!);
-    _refreshUsers(); // refresh updated user list
+    _fetchUsers(); // refresh updated user list
   }
 
   // building screen to show registered users

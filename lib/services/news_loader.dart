@@ -46,19 +46,20 @@ class NewsService {
       final response = await http.get(Uri.parse(url));
       print('Fetched URL: $url'); // show this for debug purposes
 
-      if (response.statusCode == 200) {
+      if (response.statusCode == 200) { // 200:success
         final jsonData = json.decode(response.body);
         if (jsonData['totalResults'] > 0) {
+          // has more than 0 results
           return NewsItems.fromJson(jsonData);
         } else {
           return NewsItems.withError("No news articles available.");
         }
-      } else {
+      } else { // failed
         return NewsItems.withError(
           'Failed to load news: ${response.statusCode}\n $url',
         );
       }
-    } catch (e) {
+    } catch (e) { // error handler
       return NewsItems.withError('Error fetching news: $e');
     }
   }
