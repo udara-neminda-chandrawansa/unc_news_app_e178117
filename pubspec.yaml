@@ -1,0 +1,25 @@
+name: e178117_simple_weather_news_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0-123.0.dev
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  http: ^1.1.0
+  url_launcher: ^6.1.5  # To launch URLs in a browser
+  modal_bottom_sheet: ^3.0.0
+  path: ^1.8.3
+  sqflite: ^2.3.3
+  sqflite_common_ffi: ^2.3.3
+  sqflite_common_ffi_web: ^0.4.3+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+flutter:
+  uses-material-design: true
